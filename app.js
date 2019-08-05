@@ -16,5 +16,5 @@ myCounter.innerHTML = bitCounter + " Bits";
 });
 
 /*if upgrade_1 == True => {
-
+  Working on upgrade 1 javascript, need to add event listener and then put the if statement inside the event. check for >= 100 and then subtract 100
 }*/
