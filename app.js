@@ -10,7 +10,10 @@ myCounter.innerHTML = bitCounter + " Bits";
 const item1 = document.querySelector('#upgrade1');
 
 
-
+my.addEventListener('click', (event) => {
+bitCounter++;
+myCounter.innerHTML = bitCounter + " Bits";
+});
 
 /*if upgrade_1 == True => {
 
