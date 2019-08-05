@@ -6,3 +6,12 @@ myButton.addEventListener('click', (event) => {
 bitCounter++;
 myCounter.innerHTML = bitCounter + " Bits";
 });
+
+const item1 = document.querySelector('#upgrade1');
+
+
+
+
+/*if upgrade_1 == True => {
+
+}*/
