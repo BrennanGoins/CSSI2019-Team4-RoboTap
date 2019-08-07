@@ -25,5 +25,5 @@ class Login(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', Login),
-    ('/roboTap', roboTap),
+    ('/roboTap', roboTap)
 ], debug=True)
