@@ -1,24 +1,8 @@
 import webapp2
-import os
-import jinja2
-from RoboTapUsersDB import UserData
-from google.appengine.api import users
+from google.appengine.api import users #use the Google Users API
 from google.appengine.ext import ndb
 
-gameRedirect = '<a href="/roboTap">Play Game</a>'
-
-
-jinja_current_directory = jinja2.Environment(
-    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
-    extensions=['jinja2.ext.autoescape'],
-    autoescape=True)
-
-class roboTap(webapp2.RequestHandler):
-    def get(self):
-        start_template=jinja_current_directory.get_template('Templates/start.html')
-        self.response.write(start_template.render())
-
-
+#simple datastore model to remember names and emails only
 class CssiUser(ndb.Model):
   email = ndb.StringProperty(indexed=True)
   first_name = ndb.StringProperty()
@@ -41,13 +25,11 @@ class MainHandler(webapp2.RequestHandler):
       if cssi_user:
         # Greet them with their personal information
         self.response.write('''
-            Welcome %s %s (%s)! <br> %s or %s <br>''' % (
+            Welcome %s %s (%s)! <br> %s <br>''' % (
               cssi_user.first_name,
               cssi_user.last_name,
               email_address,
-              signout_link_html,
-              gameRedirect))
-
+              signout_link_html))
       # If the user isn't registered...
       else:
         # Offer a registration form for a first-time visitor:
@@ -77,16 +59,19 @@ class MainHandler(webapp2.RequestHandler):
     self.response.write('Thanks for signing up, %s! <br><a href="/">Home</a>' %
         cssi_user.first_name)
 
-
-
-class Login(webapp2.RequestHandler):
-    def get(self):
-        start_template=jinja_current_directory.get_template("Templates/login.html")
-        self.response.write(start_template.render())
-
-
+class SecretHandler(webapp2.RequestHandler):
+  def get(self):
+    user = users.get_current_user()
+    if user:
+      email_address = user.nickname()
+      cssi_user = CssiUser.query().filter(CssiUser.email == email_address).get()
+      if cssi_user:
+        self.response.write("You found the secret content!")
+        return
+    self.error(403)
+    return
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler),
-    ('/roboTap', roboTap)
+  ('/', MainHandler),
+  ('/classified', SecretHandler)
 ], debug=True)

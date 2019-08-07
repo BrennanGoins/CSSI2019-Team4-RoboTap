@@ -34,7 +34,7 @@ if (bitCounter >= (upgrade1cost)){
   upgrade1Counter++;
   multiplier =  (2 * upgrade1Counter);
   upgrade1cost = upgrade1cost * 2;
-  upgrade1name.innerHTML = "Cost: " + upgrade1cost + " Bits";
+  upgrade1name.innerHTML = "Doubles Bits Per Click <br> Cost: " + upgrade1cost + " Bits </br>";
   upgrade1Counter ++;
 };
 myCounter.innerHTML = bitCounter + " Bits";
