@@ -1,0 +1,73 @@
+body{
+  /*background-image: url("https://static.politico.com/dims4/default/1b234fa/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Ff3%2F1b%2F3fb373c24100b7ef170124e864cb%2Flede-scola-bybenfearnley.jpg");*/
+  background-image: url("http://www.sclance.com/backgrounds/pixel-sky-background/pixel-sky-background_1761138.png");
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+}
+#title{
+  font-family: fantasy;
+  font-size: 150px;
+    color: white;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: .5fr .5fr 1fr .2fr 1fr;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.smallgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+label{
+  grid-row: 3;
+  grid-column: 2;
+  display: flex;
+  font-size: 24px;
+  color: white;
+}
+form {
+  grid-row: 3;
+  grid-column: 2;
+  align-items: center;
+  justify-content: center;
+}
+#Create {
+grid-column: 1;
+grid-row: 2;
+}
+#user {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+input{
+  color:black;
+  justify-content: center;
+}
+
+
+button {
+  width: 200px;
+  height: 60px;
+  border: 2px solid black;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+
+}
+
+#mybutton {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  height: 300px;
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
