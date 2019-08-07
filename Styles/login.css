@@ -15,7 +15,6 @@ body{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: .5fr .5fr 1fr .2fr 1fr;
   justify-items: center;
-<<<<<<< HEAD
   justify-content: space-between;
 }
 
@@ -53,10 +52,6 @@ input{
 }
 
 
-=======
-}
-
->>>>>>> facf39f2a4e016bd4ed1f324b135e00b68ac7aa1
 button {
   width: 200px;
   height: 60px;
