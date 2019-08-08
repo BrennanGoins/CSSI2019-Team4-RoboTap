@@ -73,6 +73,18 @@ upgrade3.addEventListener('click', (event) => {
       myButton.src = "../graphics/robot2-Final.gif";
     } else if (skinChanger == 5) {
       myButton.src = "../graphics/robot2_red_pallete-Final.gif";
+    } else if (skinChanger == 6) {
+      myButton.src = "../graphics/robot2_light_blue_pallete-Final.gif";
+    } else if (skinChanger == 7) {
+      myButton.src = "../graphics/robot2_green_pallete-Final.gif";
+    } else if (skinChanger == 8) {
+      myButton.src = "../graphics/robot3-Final.gif";
+    } else if (skinChanger == 9) {
+      myButton.src = "../graphics/robot3_yellow-pallete_Final.gif";
+    } else if (skinChanger == 10) {
+      myButton.src = "../graphics/robot3_red_palete-Final.gif";
+    } else if (skinChanger == 11) {
+      myButton.src = "../graphics/robot3_purple_palete-Final.gif";
     }
     myButton.style.width = "50%";
     myCounter.innerHTML = bitCounter + " Bits";
