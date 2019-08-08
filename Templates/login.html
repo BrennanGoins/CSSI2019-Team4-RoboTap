@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8"/>
     <link rel = "stylesheet" href = "../Styles/login.css">
-    <meta charset="utf-8">
     <title>RoboTap</title>
   </head>
-  <body>
+<body>
     <div id = "title" align = "center"> RoboTap </div>
     <div class="grid-container">
-          <img id = "mybutton" src = "../Styles/Robo12.png">
-<form class ="smallgrid" method = "get" action = "/roboTap">
-    <div>
-    <label><b>Username: </b></label>
-    <input id = "user" type = "text" name = "UserName" placeholder = "Enter user name" required>
+        <img id = "mybutton" src = "../Styles/Robo12.png">
+        <form class ="smallgrid" method = "get" action="/roboTap">
+          <div>
+            <label><b>Username: </b></label>
+            <input id="user" type="text" name="Username" placeholder="Enter user name" required>
+          </div>
+          <div>
+            <label><b>Password: </b></label>
+            <input type="text" name="Password" placeholder="Enter a password" required>
+          </div>
+          <div id="newUser">
+            <form method="post" action="/roboTap">
+              <button id="Create"> Create New Account </button>
+            </form>
+          </div>
+          <div id="existingUser">
+            <form method="get" action = "/">
+              <button id = "Login"> Login </button>
+          </div>
+        </form>
   </div>
-    <div>
-    <label><b>Password: </b></label>
-    <input type = "text" name = "Password" placeholder = "Enter a password" required>
-    </div>
-    <button id = "Create"> Create New Account </button>
-    <button id = "Login"> Login </button>
-  </form>
-    </div>
-
-    <script type ="text/javascript" src="../js/login.js"></script>
-
+  <script type ="text/javascript" src="../js/login.js"></script>
   </body>
 </html>

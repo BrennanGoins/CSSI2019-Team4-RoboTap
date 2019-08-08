@@ -12,14 +12,14 @@ jinja_current_directory = jinja2.Environment(
 
 class roboTap(webapp2.RequestHandler):
     def get(self):
-        start_template=jinja_current_directory.get_template('Templates/start.html')
+        start_template=jinja_current_directory.get_template('templates/start.html')
         self.response.write(start_template.render())
 
 
 class Login(webapp2.RequestHandler):
     def get(self):
-        start_template=jinja_current_directory.get_template("Templates/login.html")
-        self.response.write(start_template.render())
+        login_template=jinja_current_directory.get_template("templates/login.html")
+        self.response.write(login_template.render())
 
 
 
