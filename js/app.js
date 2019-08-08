@@ -67,8 +67,13 @@ upgrade3.addEventListener('click', (event) => {
       myButton.src = "../graphics/robot1_green_palete-Final.gif";
     } else if (skinChanger == 2) {
       myButton.src = "../graphics/robot1_orange_pallete-Final.gif";
+    } else if (skinChanger == 3) {
+      myButton.src = "../graphics/robot1_blue_pallete-Final.gif";
+    } else if (skinChanger == 4) {
+      myButton.src = "../graphics/robot2-Final.gif";
+    } else if (skinChanger == 5) {
+      myButton.src = "../graphics/robot2_red_pallete-Final.gif";
     }
-
     myButton.style.width = "50%";
     myCounter.innerHTML = bitCounter + " Bits";
     upgrade3Counter++;
