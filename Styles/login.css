@@ -34,13 +34,21 @@ body{
   grid-column: 2;
   grid-row: 2;
   position: absolute;
-  left: 55%;
-  top: 80%;
+  left: 50%;
+  top: 61.75%;
 }
 
 #user {
   grid-column: 1;
   grid-row: 1;
+}
+
+#Create {
+  color: black;
+}
+
+#Login {
+  color: black;
 }
 
 input{
