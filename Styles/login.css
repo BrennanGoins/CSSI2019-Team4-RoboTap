@@ -71,8 +71,12 @@ button {
   grid-column: 2;
   grid-row: 1 / span 2;
   height: 300px;
-  width: 30%;
+  width: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+audio {
+  visibility: hidden;
 }
