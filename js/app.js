@@ -1,7 +1,7 @@
 const myButton = document.querySelector('#mybutton');
 const myCounter = document.querySelector('#box');
 
-let bitCounter = 1;
+let bitCounter = 0;
 let multiplier = 1;
 
 let upgrade1Counter = 0;
