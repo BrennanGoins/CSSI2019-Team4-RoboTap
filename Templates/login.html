@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel = "stylesheet" href = "../Styles/login.css"
+    <link rel = "stylesheet" href = "../Styles/login.css">
     <meta charset="utf-8">
     <title>RoboTap</title>
   </head>
@@ -9,11 +9,20 @@
     <div id = "title" align = "center"> RoboTap </div>
     <div class="grid-container">
           <img id = "mybutton" src = "../Styles/Robo12.png">
-<form method = POST action = "/roboTap">
-
-    <label><b>User Name</b></label>
-    <input type = "text" name = "UserName" palceholder = "Enter user name" required>
+<form class ="smallgrid" method = "get" action = "/roboTap">
+    <div>
+    <label><b>Username: </b></label>
+    <input id = "user" type = "text" name = "UserName" placeholder = "Enter user name" required>
+  </div>
+    <div>
+    <label><b>Password: </b></label>
+    <input type = "text" name = "Password" placeholder = "Enter a password" required>
     </div>
+    <button id = "Create"> Create New Account </button>
+    <button id = "Login"> Login </button>
+  </form>
+    </div>
+
     <script type ="text/javascript" src="../js/login.js"></script>
 
   </body>

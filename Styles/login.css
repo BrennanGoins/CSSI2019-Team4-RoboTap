@@ -15,7 +15,42 @@ body{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: .5fr .5fr 1fr .2fr 1fr;
   justify-items: center;
+  justify-content: space-between;
 }
+
+.smallgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+label{
+  grid-row: 3;
+  grid-column: 2;
+  display: flex;
+  font-size: 24px;
+  color: white;
+}
+form {
+  grid-row: 3;
+  grid-column: 2;
+  align-items: center;
+  justify-content: center;
+}
+#Create {
+grid-column: 1;
+grid-row: 2;
+}
+#user {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+input{
+  color:black;
+  justify-content: center;
+}
+
 
 button {
   width: 200px;
