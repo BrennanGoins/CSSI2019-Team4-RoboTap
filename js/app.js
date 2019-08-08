@@ -1,7 +1,7 @@
 const myButton = document.querySelector('#mybutton');
 const myCounter = document.querySelector('#box');
 
-let bitCounter = 0;
+let bitCounter = 1;
 let multiplier = 1;
 
 let upgrade1Counter = 0;
@@ -10,7 +10,7 @@ let upgrade3Counter = 0;
 
 let upgrade1cost = 100;
 let upgrade2cost = 200;
-let upgrade3cost = 500;
+let upgrade3cost = 250;
 
 let clicksstart = 0;
 let clicksend = 0;
@@ -61,6 +61,7 @@ if (upgrade2Counter > 0) {
 upgrade3.addEventListener('click', (event) => {
   if (bitCounter >= upgrade3cost){
     bitCounter = bitCounter  - upgrade3cost;
+    upgrade3cost = upgrade3cost * 2;
     skinChanger = skinChanger + 1;
     console.log(skinChanger);
     if (skinChanger == 1){
@@ -89,6 +90,7 @@ upgrade3.addEventListener('click', (event) => {
     myButton.style.width = "50%";
     myCounter.innerHTML = bitCounter + " Bits";
     upgrade3Counter++;
+    upgrade3name.innerHTML = "Robot Frame Upgrade <br> Cost: " + upgrade3cost + " Bits " + "(" + upgrade3Counter + ")" + "</br>";
   };
 });
 
