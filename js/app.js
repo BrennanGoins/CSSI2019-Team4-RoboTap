@@ -15,6 +15,8 @@ let upgrade3cost = 1;
 let clicksstart = 0;
 let clicksend = 0;
 
+let skinChanger = 0;
+
 myButton.addEventListener('click', (event) => {
 bitCounter += multiplier;
 myCounter.innerHTML = bitCounter + " Bits";
@@ -45,7 +47,7 @@ upgrade2.addEventListener('click', (event) => {
   if (bitCounter >= upgrade2cost){
     bitCounter = bitCounter  - upgrade2cost;
     upgrade2cost = upgrade2cost * 2;
-    upgrade2name.innerHTML = "Cost: " + upgrade2cost + " Bits";
+    upgrade2name.innerHTML = "Gives Bits Per Second <br> Cost: " + upgrade2cost + " Bits </br>";
     myCounter.innerHTML = bitCounter + " Bits";
     upgrade2Counter++;
 }
@@ -57,9 +59,16 @@ if (upgrade2Counter > 0) {
 });
 
 upgrade3.addEventListener('click', (event) => {
-  if (bitCounter >= upgrade3cost && upgrade3Counter <= 0){
+  if (bitCounter >= upgrade3cost){
     bitCounter = bitCounter  - upgrade3cost;
-    myButton.src= "../Styles/robot2.gif";
+    skinChanger = skinChanger + 1;
+    console.log(skinChanger);
+    if (skinChanger == 1){
+      myButton.src = "../graphics/robot1_green_palete-Final.gif";
+    } else if (skinChanger == 2) {
+      myButton.src = "../graphics/robot1_orange_pallete-Final.gif";
+    }
+
     myButton.style.width = "50%";
     myCounter.innerHTML = bitCounter + " Bits";
     upgrade3Counter++;
