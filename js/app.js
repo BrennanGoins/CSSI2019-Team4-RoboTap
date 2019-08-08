@@ -8,9 +8,9 @@ let upgrade1Counter = 0;
 let upgrade2Counter = 0;
 let upgrade3Counter = 0;
 
-let upgrade1cost = 1;
-let upgrade2cost = 1;
-let upgrade3cost = 1;
+let upgrade1cost = 100;
+let upgrade2cost = 200;
+let upgrade3cost = 500;
 
 let clicksstart = 0;
 let clicksend = 0;
@@ -36,8 +36,7 @@ if (bitCounter >= (upgrade1cost)){
   upgrade1Counter++;
   multiplier =  (2 * upgrade1Counter);
   upgrade1cost = upgrade1cost * 2;
-  upgrade1name.innerHTML = "Doubles Bits Per Click <br> Cost: " + upgrade1cost + " Bits </br>";
-  upgrade1Counter ++;
+  upgrade1name.innerHTML = "Doubles Bits Per Click <br> Cost: " + upgrade1cost + " Bits " + "(" + upgrade1Counter + ")" + "</br>";
 };
 myCounter.innerHTML = bitCounter + " Bits";
 });
@@ -47,13 +46,14 @@ upgrade2.addEventListener('click', (event) => {
   if (bitCounter >= upgrade2cost){
     bitCounter = bitCounter  - upgrade2cost;
     upgrade2cost = upgrade2cost * 2;
-    upgrade2name.innerHTML = "Gives Bits Per Second <br> Cost: " + upgrade2cost + " Bits </br>";
-    myCounter.innerHTML = bitCounter + " Bits";
     upgrade2Counter++;
+    upgrade2name.innerHTML = "Gives Bits Per Second <br> Cost: " + upgrade2cost + " Bits " + "(" + upgrade2Counter + ")" + "</br>";
+    myCounter.innerHTML = bitCounter + " Bits";
+
 }
 if (upgrade2Counter > 0) {
   setInterval(function(){
-    bitCounter = bitCounter + 10
+    bitCounter = bitCounter + 2
     myCounter.innerHTML = bitCounter + " Bits"; }, 1000);
 };
 });
